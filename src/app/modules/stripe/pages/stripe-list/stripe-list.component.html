@@ -1,0 +1,25 @@
+<div class="title-pizza">
+    <ul>
+        <li><img src="../../../../../assets/img/logo_pizza.jpg" alt="pizza"></li>
+        <li><h1>Pizza Pop </h1></li>
+        <li><h3>¡Haz tú compra en un click! <i class="far fa-hand-point-up"></i></h3></li>
+    </ul>
+</div>
+<div>
+    <h2 style="text-align: center;">MENÚ</h2>
+    <section id="pizzas" class="pizzas pt-2 pb-4">
+        <div #producto *ngFor="let product of Products" [attr.data-price]="product.id">
+            <figure class="pizza" (click)="pagoStripe(producto)">
+                <img src="{{product.image}}" alt="product">
+                <figcaption>
+                    <h3>{{product.nameProduct}}</h3>
+                    <br>
+                    <h4>{{product.price}}</h4>
+                </figcaption>
+            </figure>
+        </div>
+
+    </section>
+    
+</div>
+

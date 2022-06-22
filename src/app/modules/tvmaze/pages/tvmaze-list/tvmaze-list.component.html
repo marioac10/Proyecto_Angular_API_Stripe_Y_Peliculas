@@ -1,0 +1,122 @@
+<div class="body-page" style="padding-bottom: 40px;">
+    <div class="container-fluid">
+        <div class="row justify-content-end pt-3 pe-5">
+            <div class="col-4">
+                <!-- <form> -->
+                    <div class="input-group">
+                        <input class="form-control search" 
+                        [(ngModel)]="queryMovie" 
+                        id="search" type="text" 
+                        placeholder="Buscar..." 
+                        >
+                        <button class="btn btn-primary bg-danger" (click)="searchMovies()"> Buscar </button>
+                    </div>
+                <!-- </form> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="p-3 text-center" style="background-color: #165C8E;">
+        <h1 class="m-0" style="color: white; font-weight: bold; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">C a r t e l e r a</h1>
+    </div>
+   
+    <div class="row paginator">
+        <div class="col-xs-12 col-12 d-flex justify-content-center">
+          <pagination 
+            [totalItems]="totalTopMovies" 
+            [itemsPerPage]="20" 
+            [maxSize]="maxSize"
+            [(ngModel)]="currentPage" 
+            [boundaryLinks]="true"
+            [customFirstTemplate]="firstTemplate"
+            [customLastTemplate]="lastTemplate"
+            (pageChanged)="pageChanged($event)"
+            [customPreviousTemplate]="previusTemplate"
+            [customNextTemplate]="nextTemplate"
+            >
+        </pagination>
+        </div>
+    </div>
+
+    <ng-template #nextTemplate let-disabled="disabled" let-currentPage="currentPage">
+        <ng-container *ngIf="!disabled">
+          Next ➡️
+        </ng-container>
+        <ng-container *ngIf="disabled">
+          ⛔
+        </ng-container>
+    </ng-template>
+
+    <ng-template #previusTemplate let-disabled="disabled" let-currentPage="currentPage">
+        <ng-container *ngIf="!disabled">
+            ⬅️ Previus
+        </ng-container>
+        <ng-container *ngIf="disabled">
+          ⛔
+        </ng-container>
+    </ng-template>
+
+    <ng-template #firstTemplate let-disabled="disabled" let-currentPage="currentPage">
+        Start 🏁
+    </ng-template>
+    <ng-template #lastTemplate let-disabled="disabled" let-currentPage="currentPage">
+        Finish 🏁
+    </ng-template>
+
+    <div id="movies">
+        <div id="movie-template" *ngFor="let movie of movies">
+            <div class="container-movie">
+                <div class="movie">
+                    <img src="{{movie.image}}" alt="" style="width: 200px;">
+                    <div class="movie-info">
+                        <h2>{{movie.title}}</h2>
+                        <span [ngClass]="{
+                            'green':movie.averageVotes >= 8,
+                            'orange':movie.averageVotes < 8 && movie.averageVotes >= 5,
+                            'red':movie.averageVotes < 5
+                        }">{{movie.averageVotes}}</span>
+                    </div>
+                    <div class="overview">
+                        {{movie.sinopsis}}
+                    </div>
+                </div>
+                <div>
+                    <button class="btn btn-primary container-fluid" (click)="openModalMovie(movie,templateModalmovie)">Ver...</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ng-template #templateModalmovie>       
+        <div class="modal-header" style="background-color: #22254b;">
+            <h4 class="modal-title pull-left" style="color: white; font-family: cursive;">Movie - Details</h4>
+            <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalMovieRef?.hide()">
+              <span aria-hidden="true" class="visually-hidden">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body" style="background-color: #22254b;">
+            <div class="text-center" style="background-color: #22254b;">
+                <img [src]="movieModal.image" alt="" width="200px">
+            </div>
+            <div class="" style="background-color: #22254b;">
+                <p class="text-center" style="color: white; font-size: 1.5rem; font-family: cursive;"><b>{{movieModal.title}}</b></p>
+                <p class="votacion text-center" style="color: white; font-family: cursive;"><b>Votación: {{movieModal.averageVotes}}</b></p>
+            </div>
+        </div>
+        <div class="modal-footer" style="background-color: #22254b;">
+            <button type="button" class="btn btn-default" style="background-color: white; color: black;" (click)="modalMovieRef?.hide()">Cerrar</button>
+        </div>
+    </ng-template>
+
+
+    <ngx-spinner
+        bdColor="rgba(51,51,51,0.8)"
+        size="medium"
+        color="#fff"
+        type="ball-scale-multiple"
+    >
+        <p style="font-size: 20px; color: white">Cargando...</p>
+    </ngx-spinner>
+
+    
+</div>

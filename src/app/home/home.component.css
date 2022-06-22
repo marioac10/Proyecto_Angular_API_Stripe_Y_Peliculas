@@ -1,0 +1,60 @@
+.cuerpo {
+  background-color: #2874A6;
+  /*---------- Imagen de portada-------------*/
+}
+
+.title-img {
+  position: relative;
+  width: 90% !important;
+}
+
+.title-img img {
+  width: 100%;
+  border-radius: 0 0 15px 15px;
+}
+
+.contenedor-angular {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contenedor-angular img {
+  width: 20%;
+  height: 20%;
+}
+
+.leading-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.main-title-item {
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
+}
+
+.btn-primary {
+  background-color: #DD9014;
+  border-color: #DD9014;
+  font-weight: bold;
+}
+
+.card {
+  background-color: #AF601A;
+}
+
+.card .card-title {
+  color: white;
+}
+/*# sourceMappingURL=home.component.css.map */

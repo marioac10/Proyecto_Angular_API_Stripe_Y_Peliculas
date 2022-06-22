@@ -1,0 +1,29 @@
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #943126;
+  background-color: #1586D2;
+}
+
+footer iframe {
+  width: 100%;
+}
+
+footer .item-footer h4 {
+  font-weight: bold;
+}
+
+footer .item-footer p {
+  font-size: 13px;
+}
+
+footer .item-footer h4, footer .item-footer h5, footer .item-footer p {
+  padding: 0;
+  margin: 0;
+}
+/*# sourceMappingURL=footer.component.css.map */

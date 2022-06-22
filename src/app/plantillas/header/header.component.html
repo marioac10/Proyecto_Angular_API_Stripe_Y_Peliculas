@@ -1,0 +1,76 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow p-0 bg-body" >
+  <div class="container-fluid">
+    <a class="navbar-brand" href="https://www.plenumsoft.com.mx/" target="_blank"><img class="img-fluid" width="170rem" src="../../../assets/img/logo-plenum.png" alt="plenum"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-center" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mb-lg-0 mx-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href=""><i class="fas fa-home" style="color:#5B2C6F; font-size:2rem;"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.plenumsoft.com.mx/About" target="_blank">ACERCA DE</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sección API</a>
+          <ul class="dropdown-menu w-50 mx-auto text-center" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" [routerLink]="['/tvmaze/lista']"><i class="fab fa-apple" style="color: blue;"></i> TvMaze</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/stripe/lista']"><i class="fab fa-apple" style="color: brown;"></i> Stripe</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="evidencias.html" target="_blank" style="color: red; font-weight: bold;">EVIDENCIAS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.plenumsoft.com.mx/Contact" target="_blank">CONTÁCTANOS</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav mb-lg-0 d-none d-lg-flex">
+          <li class="nav-item">
+              <img src="../../../assets/img/tecnm.png" alt="tecnm" width="140rem">
+            </li>
+          <li class="nav-item">
+              <img src="../../../assets/img/itch.jpg" alt="itch" width="50rem">
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" [routerLink]="">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/stripe/lista']">Stripe</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/tvmaze/lista']">TVmaze</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav> -->

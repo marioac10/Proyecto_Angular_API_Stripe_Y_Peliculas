@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "stripe-list.component.sass"
+    ],
+    "names": [],
+    "file": "stripe-list.component.css"
+}

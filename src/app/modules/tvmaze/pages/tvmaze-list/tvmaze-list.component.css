@@ -1,0 +1,175 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.search {
+  background-color: transparent;
+  border: 2px solid #22254b;
+  padding: 0.5rem 1rem;
+  border-radius: 50px 0px 0px 50px;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.search:focus {
+  outline: 0;
+  background-color: #22254b;
+}
+
+.search::-webkit-input-placeholder {
+  color: white;
+}
+
+.search:-ms-input-placeholder {
+  color: white;
+}
+
+.search::-ms-input-placeholder {
+  color: white;
+}
+
+.search::placeholder {
+  color: white;
+}
+
+.body-page {
+  background-color: #165C8E;
+}
+
+.paginator {
+  margin: 1rem;
+}
+
+#movies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container-movie {
+  margin: 1rem;
+}
+
+.container-movie .btn-primary {
+  background-color: #E67E22;
+  border-color: #E67E22;
+  border-radius: 0px 0px 3px 3px;
+}
+
+.movie {
+  width: 200px;
+  border-radius: 3px 3px 0px 0px;
+  -webkit-box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.1);
+  background-color: #E67E22;
+  position: relative;
+  overflow: hidden;
+}
+
+.votacion {
+  font-size: 1.5rem;
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie-info {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.movie-info h2 {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.movie-info span {
+  background-color: #22254b;
+  padding: 0.25rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.movie-info span.green {
+  color: lightgreen;
+}
+
+.movie-info span.orange {
+  color: orange;
+}
+
+.movie-info span.red {
+  color: red;
+}
+
+.overview {
+  position: absolute;
+  overflow-y: scroll;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  padding: 1rem;
+  max-height: 100%;
+  -webkit-transform: translateY(101%);
+          transform: translateY(101%);
+  -webkit-transition: -webkit-transform 0.3s ease-in;
+  transition: -webkit-transform 0.3s ease-in;
+  transition: transform 0.3s ease-in;
+  transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+#tags {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px auto;
+}
+
+.tag {
+  color: white;
+  padding: 10px 15px;
+  background-color: orange;
+  border-radius: 15%;
+  margin: 5px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.iluminado {
+  background-color: brown;
+}
+/*# sourceMappingURL=tvmaze-list.component.css.map */
